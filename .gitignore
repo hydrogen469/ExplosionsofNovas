@@ -1,3 +1,3 @@
-test/
+nova/
 __pycache__/
 flask_session/
