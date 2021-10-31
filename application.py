@@ -9,7 +9,7 @@ from models import *
 app = Flask(__name__)
 app.secret_key = os.environ.get('HIDDEN_SECRET')
 
-app.config['SQLALCHEMY_DATABASE_URI']=os.environ.get('DATABASE_URL')
+app.config['SQLALCHEMY_DATABASE_URI']=os.environ.get('DATABASE_URL').replace("postgres://", "postgresql://", 1)
 db = SQLAlchemy(app)
 
 socketio = SocketIO(app)
