@@ -74,5 +74,5 @@ def leave(data):
     leave_room(data['room'])
     send({'msg': data['username'] + " has left the " + data['room'] + " room. Bye " + data['username'] + "!"}, room=data['room'])
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     app.run()
